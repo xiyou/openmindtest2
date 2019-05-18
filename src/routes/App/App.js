@@ -3,12 +3,18 @@
  * @author rongli
  */
 import React from "react";
+import styles from "./App.css";
 import { connect } from "dva";
+import Header from "../Header";
+import DiscussQuestions from "../DiscussQuestions";
 
 function App(props) {
-  return <div>爱你</div>;
+  return (
+    <div className={styles.app}>
+      <Header />
+      <DiscussQuestions />
+    </div>
+  );
 }
-
-
 
 export default connect()(App);

@@ -2,7 +2,7 @@
  * @description 输入：数据库数组和用户选中的tag数据，输出：用户需要的数组
  * @author rongli
  */
-import data from "./Mock/data.json";
+import data from "../../mock/data.json";
 let checkTags = [];
 // 这个函数判断无论多少个标签，都遍历做判断，并最终返回布尔值
 

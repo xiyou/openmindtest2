@@ -1,0 +1,47 @@
+.menu {
+  width: 290px;
+  height: 340px;
+  box-shadow: 0 0 4px 5px #f1f1f1;
+  background-color: #ffffff;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+
+.tags {
+  height: 270px;
+  overflow: auto;
+  transform: translateX();
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  border-top: 2px solid #f5f4f7;
+  cursor: pointer;
+}
+
+.tagContent {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  width: 256px;
+}
+
+.square {
+  align-self: center;
+  display: inline-block;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  background-color: pink;
+}
+
+.tag > strong {
+  align-self: center;
+}

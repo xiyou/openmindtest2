@@ -1,0 +1,27 @@
+/*
+ 先写哪些属性，再写哪些属性
+ 输入-处理-输出
+*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 426px;
+}
+
+.join,
+.tags,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 19px;
+}
+
+.my {
+  width: 106px;
+}
+
+.time {
+  width: 148px;
+}
