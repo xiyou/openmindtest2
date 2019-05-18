@@ -9,9 +9,8 @@ let tagList = [
 ];
 
 export default function searchTagHanlde(value) {
-  console.log(value);
   if (value === "") {
     return tagList;
   }
-  return tagList.filter(item => item.name === value);
+  return tagList.filter(item => item.name.indexOf(value) !== -1);
 }
