@@ -9,10 +9,24 @@
   display: flex;
   justify-content: center;
   height: 70px;
+  border-bottom: 2px solid #f5f4f7;
 }
 
 .tags {
   height: 270px;
-  overflow: auto;
+  overflow-y: scroll;
   transform: translateX();
 }
+
+.tags::-webkit-scrollbar {
+  width: 12px;
+}
+
+.tags::-webkit-scrollbar-thumb {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+
+/* .tags::-webkit-scrollbar-track {
+  border-radius: 10px;
+} */

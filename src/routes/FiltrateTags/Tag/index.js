@@ -7,9 +7,6 @@ function Tag(props) {
 
   // 这个函数要做两件事了
   function controlIconShow(id) {
-    // 输入-输出
-    // 需要别人搭把手，把数据传递出去。
-
     if (showIcon) {
       setShow(false);
       props.decreseTag(id);
@@ -18,6 +15,7 @@ function Tag(props) {
       props.addTag(id);
     }
   }
+  
   return (
     <div className={styles.tag} onClick={() => controlIconShow(props.id)}>
       <div className={styles.tagContent}>

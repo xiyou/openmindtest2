@@ -24,7 +24,13 @@ function MemberDiscussion(props) {
       </div>
       <div className={styles.containerDown}>
         <div>
-          <Avatar style={{ marginRight: "20px", color: "white" }}>
+          <Avatar
+            style={{
+              marginRight: "20px",
+              color: "white",
+              backgroundColor: "#fde3cf"
+            }}
+          >
             {props.avatar}
           </Avatar>
           <span>{props.initiator}</span>·<span>{props.startingTime}</span>

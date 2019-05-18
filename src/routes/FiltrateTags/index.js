@@ -21,6 +21,12 @@ function FiltrateTag({ dispatch, filtrateTags }) {
       payload: id
     });
   }
+  function serachTagValue(e) {
+    dispatch({
+      type: "filtrateTags/searchTag",
+      payload: e.target.value
+    });
+  }
   let menu = (
     <div className={styles.menu}>
       <div className={styles.search}>
@@ -28,6 +34,7 @@ function FiltrateTag({ dispatch, filtrateTags }) {
           type="search"
           style={{ width: "256px", height: "40px", alignSelf: "center" }}
           defaultValue={"过滤标签"}
+          onChange={serachTagValue}
         />
       </div>
       <div className={styles.tags}>
