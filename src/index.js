@@ -1,6 +1,6 @@
 import dva from "dva";
 import "./index.css";
-
+import dataList from "../mock/data.json";
 // 1. Initialize
 const app = dva({
   initialState: {
@@ -15,7 +15,7 @@ const app = dva({
         { id: 6, name: "且一个讨论", color: "#008a8d" },
         { id: 7, name: "对应多个", color: "#559df8" }
       ],
-      discussList: []
+      discussList: dataList.slice(0, 5)
     }
   }
 });
