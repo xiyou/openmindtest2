@@ -61,7 +61,7 @@ function FiltrateTag({ dispatch, filtrateTags }) {
       visible={isVisible}
       onVisibleChange={flag => setVisible(flag)}
     >
-      <a className="ant-dropdown-link" href="#/home">
+      <a className="ant-dropdown-link" href="#/">
         <Icon type={isVisible ? "down" : "up"} style={{ fontSize: "20px" }} />{" "}
         标签
       </a>
