@@ -2,7 +2,7 @@
  * @description 标签，筛选功能 拆分复杂度
  * @tip 描述完组件后，要导出，输入-处理-输出
  */
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "dva";
 import { Dropdown, Input, Icon } from "antd";
 import styles from "./FiltrateTags.css";
@@ -15,18 +15,22 @@ function FiltrateTag({ dispatch, filtrateTags }) {
       payload: id
     });
   }
+
   function decreseTag(id) {
     dispatch({
       type: "filtrateTags/decreseTag",
       payload: id
     });
   }
+
   function serachTagValue(e) {
     dispatch({
       type: "filtrateTags/searchTag",
       payload: e.target.value
     });
   }
+
+  const [isVisible, setVisible] = useState(false);
   let menu = (
     <div className={styles.menu}>
       <div className={styles.search}>
@@ -54,10 +58,12 @@ function FiltrateTag({ dispatch, filtrateTags }) {
       overlay={menu}
       placement="bottomLeft"
       overlayStyle={{ paddingTop: "22px" }}
-      visible
+      visible={isVisible}
+      onVisibleChange={flag => setVisible(flag)}
     >
-      <a className="ant-dropdown-link" href="#">
-        <Icon type="down" style={{ fontSize: "20px" }} /> 标签
+      <a className="ant-dropdown-link" href="#/home">
+        <Icon type={isVisible ? "down" : "up"} style={{ fontSize: "20px" }} />{" "}
+        标签
       </a>
     </Dropdown>
   );

@@ -4,7 +4,6 @@
  */
 import React from "react";
 import styles from "./App.css";
-import { connect } from "dva";
 import Header from "../Header";
 import DiscussQuestions from "../DiscussQuestions";
 
@@ -17,4 +16,4 @@ function App(props) {
   );
 }
 
-export default connect()(App);
+export default App;
