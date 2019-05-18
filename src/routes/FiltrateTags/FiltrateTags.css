@@ -16,32 +16,3 @@
   overflow: auto;
   transform: translateX();
 }
-
-.tag {
-  display: flex;
-  justify-content: center;
-  height: 40px;
-  border-top: 2px solid #f5f4f7;
-  cursor: pointer;
-}
-
-.tagContent {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-  width: 256px;
-}
-
-.square {
-  align-self: center;
-  display: inline-block;
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  background-color: pink;
-}
-
-.tag > strong {
-  align-self: center;
-}

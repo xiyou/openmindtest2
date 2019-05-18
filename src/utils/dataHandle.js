@@ -22,13 +22,35 @@ function handleData(tags) {
   }
 }
 
-export default function dataFilter(id) {
-  checkTags.push(id);
-  // 输入的数据：data.json listId，
-  // 输出：数组遍历过后，返回该我们需要的数组，如何实现？
+export default function dataHanlde(id, bool) {
+  if (bool) {
+    checkTags.push(id);
+  } else {
+    checkTags = checkTags.filter(val => val !== id);
+  }
   let list = data.filter(item => {
     return handleData(item.tags);
   });
   console.log(list);
   return list;
 }
+// export function dataFilter(id) {
+//   console.log(id);
+//   checkTags.push(id);
+//   // 输入的数据：data.json listId，
+//   // 输出：数组遍历过后，返回该我们需要的数组，如何实现？
+//   let list = data.filter(item => {
+//     return handleData(item.tags);
+//   });
+//   console.log(list);
+//   return list;
+// }
+
+// export function decreseData(id) {
+//   checkTags = checkTags.filter(val => val !== id);
+//   let list = data.filter(item => {
+//     return handleData(item.tags);
+//   });
+//   console.log(list);
+//   return list;
+// }
