@@ -9,3 +9,7 @@ git clone https://github.com/xiyou/test2.git
 ### 安装相关依赖
 
 npm install or yarn
+
+### 项目启动
+
+yarn start or npm start
